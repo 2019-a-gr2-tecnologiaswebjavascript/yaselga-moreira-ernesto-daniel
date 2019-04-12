@@ -1,19 +1,10 @@
 <h1 class="rojo">Titulo {{title}}</h1>
 <!-- {{interpolacion}}  -->
-<app-item-galeria
-    nombreItem="Papitas"
-    textoBoton="A lo bestia"
+<app-item-galeria 
+    *ngFor= "let Flor of arregloFlores"
+    [textoBoton]= "Flor.nombre"
+    [nombreItem]=  "Flor.descripcion"
 >
+asd
 </app-item-galeria>
-
-<app-item-galeria
-    nombreItem="Carnitas"
-    textoBoton="Gorditas"
->
-</app-item-galeria>
-
-<app-item-galeria
-    nombreItem="Chicas"
-    textoBoton="Cheveres"
->
-</app-item-galeria>
+    

@@ -2,3 +2,7 @@
 <p>Nombre: {{nombreItem}}</p>
 <!-- EVENT BINDING () ->  Evento -->
 <button (click)="alertar()"> {{textoBoton}}</button>
+{{notas}}
+<p *ngFor="let nota of notas">
+    {{nota}}
+</p>
