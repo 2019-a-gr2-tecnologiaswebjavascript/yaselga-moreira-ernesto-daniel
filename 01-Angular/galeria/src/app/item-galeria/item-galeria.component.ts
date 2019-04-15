@@ -9,17 +9,23 @@ export class ItemGaleriaComponent implements OnInit {
 
   title = 'Licoreria';
 
-  url = 'https://dpf77bhxauhdh.cloudfront.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/c/e/cerveza-corona-extra-355-cc-pack-24-botellas.jpg';
-
-  // en varibles const una sola reasignacion
-  // var no vamos a utilizar
-  // let permite cambiar el valor
-
   @Input()
-  textoBoton;
+  textoBoton;   
 
   @Input()
   nombreItem;
+
+  @Output()
+  cambioChela:EventEmitter<boolean> = new EventEmitter()
+
+  @Output()
+  cambioCerveza:EventEmitter<boolean> = new EventEmitter()
+
+  notas = [1,2,3,4,5,6,7,9,10]
+
+  url= "http://www.dna-autoparts.com/23121-thickbox_default/bielas-forjadas-eagle-para-sr20det.jpg"
+  
+  
 
   constructor() { }
 
@@ -27,57 +33,57 @@ export class ItemGaleriaComponent implements OnInit {
   }
 
   alertar(){
-    alert('Auxilio me desmayo :v '+this.nombreItem);
-  }
-
-  alertarBlur(){
-    alert('Alertando bliur');
+    alert('Auxilio me desmayo: ' + this.nombreItem);
   }
 
   cambiarImagen(){
-    const url1= 'https://media.aweita.larepublica.pe/678x508/aweita/imagen/2018/03/07/noticia-seis-estudios-cientificos-que-demuestran-los-beneficios-de-la-cerveza-para-la-salud.png';
-    const url2 = 'https://dpf77bhxauhdh.cloudfront.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/c/e/cerveza-corona-extra-355-cc-pack-24-botellas.jpg';
-    
-    if (this.url === url1){
-      this.url = url2;
+    const cervezas = "https://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpg"
+    const chelas = "http://www.dna-autoparts.com/23121-thickbox_default/bielas-forjadas-eagle-para-sr20det.jpg"
+    if(this.url === cervezas){
+      this.url = chelas;
       this.cambioChela.emit(true);
-    }
-    else{
-      this.url = url1;
+    }else{
+      this.url = cervezas;
       this.cambioCerveza.emit(true);
     }
- 
+    // var url2 = "http://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpghttp://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpg"
+    // let url3 = "http://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpghttp://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpg"
+    // this.url = url1;
   }
 
-  notas = [1,2,3,4,5,6,7,8,9,10]
 
-  @Output()
-  cambioChela: EventEmitter<boolean> = new EventEmitter()
 
-  @Output()
-  cambioCerveza: EventEmitter<boolean> = new EventEmitter()
+
+
 }
+
 /*
-@DecoreatorsClase() // -> Funcion que se ejecuta antes de algo
+@DecoratorsClase() 
 class Usuario{
   @DecoratorsVariable()
-  private nombre = 'Alex';
-
+  private nombre = 'Adrian';
   constructor(@DecoratorsConstructor() nombre){
 
   }
+
   @DecoratorsMetodo()
-  metodoPublico(){
+ metodoPublico(){
 
-  }
+ }
+ private metodoPrivado(){
 
-  private metodoPrivate(){
+ }
+ protected metodoProtected(){
 
-  }
-
-  protected metodoProtected(){
-    
-  }
-
+ }
 }
 */
+
+
+
+
+
+
+
+
+

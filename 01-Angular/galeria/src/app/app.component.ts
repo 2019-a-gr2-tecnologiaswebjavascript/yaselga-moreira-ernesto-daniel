@@ -6,68 +6,51 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  clase = 'rojo';
-
-  title = 'floreria';
-
+  title = 'Floreria';
   arregloFlores = [
-    new Flor("Papitas", "a lo bestia"),
-    new Flor("Carnitas", "gorditas"),
-    new Flor("chicas", "cheveres")
+    new Flor("Papitas","A lo bestia"),
+    new Flor("Carnitas","Gorditas"),
+    new Flor("Chicas","Cheveres"),
   ];
 
-  arregloFLoresJs = [
+  arregloFloresJS = [
     {
-      nombre: "papitas",
-      descripcion: "a lo bestia"
+      nombre: "Papitas",
+      descripcion: "A lo bestia"
     },
     {
-      nombre: "carnitas",
-      descripcion: "gorditas"
+      nombre: "Carnitas",
+      descripcion: "Gorditas"
     },
     {
-      nombre: "chicas",
-      descripcion: "cheveres"
+      nombre: "Chicas",
+      descripcion: "Cheveres"
     }
   ]
 
-  cambioChela(evento: boolean){
-    console.log('Llego a chela: ', evento);
-    const verde: string = 'verde';
-    this.clase = verde;
+  cambioChela(evento:boolean){
+    //logica hacer titulo verde
+    console.log('llego a chela: ',evento)
+    if(this.evento = true){
+      this.url = chelas;
+      this.cambioChela.emit(true);
+    }else{
 
-
+    }
   }
 
-  cambioCerveza(evento: boolean){
-    console.log('Llego a cerveza: ', evento);
-    const verde: string = 'amarillo';
-    this.clase = verde;
+  cambioCerveza(evento:boolean){
+    //logica hacer titulo amarillo
+    console.log('llego a cerveza: ',evento)
   }
-
 }
 
 
-class Flor{
-
-  /*
-
-  nombre: string;
-  descripcion: string;
-
-  constructor(nombre: string, descripcion: string){
-    this.nombre = nombre;
-    this.descripcion = descripcion;
-
+class Flor {
+  
+  constructor(
+    public nombre:string,
+    public descripcion:string){
+    
   }
-
-  TODO LO QUE ESTA ARRIBA SE PUEDE HACER EN LA LINEA DE ABAJO!!!!!!
-
-*/
-
-  constructor(public nombre: string, public descripcion: string){
-
-  }
-
-} 
+}
