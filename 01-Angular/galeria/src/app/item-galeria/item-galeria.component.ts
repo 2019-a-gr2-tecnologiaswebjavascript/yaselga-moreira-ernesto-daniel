@@ -1,83 +1,144 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-item-galeria',
   templateUrl: './item-galeria.component.html',
   styleUrls: ['./item-galeria.component.css']
 })
-export class ItemGaleriaComponent implements OnInit {
+export class ItemGaleriaComponent implements OnInit,OnDestroy {
 
   title = 'Licoreria';
 
-  url = 'https://dpf77bhxauhdh.cloudfront.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/c/e/cerveza-corona-extra-355-cc-pack-24-botellas.jpg';
-
-  // en varibles const una sola reasignacion
-  // var no vamos a utilizar
-  // let permite cambiar el valor
+  @Input()
+  titulo; 
 
   @Input()
-  textoBoton;
+  textoBoton;   
 
   @Input()
   nombreItem;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  alertar(){
-    alert('Auxilio me desmayo :v '+this.nombreItem);
-  }
-
-  alertarBlur(){
-    alert('Alertando bliur');
-  }
-
-  cambiarImagen(){
-    const url1= 'https://media.aweita.larepublica.pe/678x508/aweita/imagen/2018/03/07/noticia-seis-estudios-cientificos-que-demuestran-los-beneficios-de-la-cerveza-para-la-salud.png';
-    const url2 = 'https://dpf77bhxauhdh.cloudfront.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/c/e/cerveza-corona-extra-355-cc-pack-24-botellas.jpg';
-    
-    if (this.url === url1){
-      this.url = url2;
-      this.cambioChela.emit(true);
-    }
-    else{
-      this.url = url1;
-      this.cambioCerveza.emit(true);
-    }
- 
-  }
-
-  notas = [1,2,3,4,5,6,7,8,9,10]
 
   @Output()
   cambioChela: EventEmitter<boolean> = new EventEmitter()
 
   @Output()
   cambioCerveza: EventEmitter<boolean> = new EventEmitter()
+
+  url = "http://www.dna-autoparts.com/23121-thickbox_default/bielas-forjadas-eagle-para-sr20det.jpg";
+
+  notas = [1,2,3,4,5,6,7,8,9,10]
+
+  constructor() { }
+
+  
+
+  alertar(){
+    alert('Auxilio me desmayo: ' + this.nombreItem);
+  }
+
+  alertarBlur(){
+    alert('Alertar blur');
+  }
+
+  cambiarImagen(){
+    const cervezas = "https://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpg"
+    const chelas = "http://www.dna-autoparts.com/23121-thickbox_default/bielas-forjadas-eagle-para-sr20det.jpg"
+    if(this.url === cervezas){
+      this.url = chelas;
+      this.cambioChela.emit(true);
+    }else{
+      this.url = cervezas;
+      this.cambioCerveza.emit(true);
+    }
+    // var url2 = "http://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpghttp://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpg"
+    // let url3 = "http://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpghttp://img.chilango.com/2016/01/cervezas-cervezas-cervezas.jpg"
+    // this.url = url1;
+  }
+
+  ngOnInit() {
+    console.log("'Empezo'");
+  }
+
+  ngOnDestroy(){
+    console.log('"Termino"');
+  }
+
+
 }
+
 /*
-@DecoreatorsClase() // -> Funcion que se ejecuta antes de algo
+@DecoratorsClase() 
 class Usuario{
   @DecoratorsVariable()
-  private nombre = 'Alex';
-
+  private nombre = 'Adrian';
   constructor(@DecoratorsConstructor() nombre){
 
   }
+
   @DecoratorsMetodo()
-  metodoPublico(){
+ metodoPublico(){
 
-  }
+ }
+ private metodoPrivado(){
 
-  private metodoPrivate(){
+ }
+ protected metodoProtected(){
 
-  }
-
-  protected metodoProtected(){
-    
-  }
-
+ }
 }
+*/
+
+
+
+/*
+Ciclo de vida del componente
+
+ngOnInit -> OnInit -> Instancia
+ngOnDestroy -> OnDestroy
+
+*/ 
+
+/*
+- RUTA -> LOGIN/MODULOS/ETC
+  - PAPA []->hijo  []->hija
+    - HIJO []->nieto ()->papa
+      - NIETO ->()->hijo
+  - HIJA
+    - NIETA
+  - TIO
+    - PRIMO
+*/
+
+
+/* - SERVICIO
+><
+  - PAPA
+    - HIJO
+      - NIETO
+  - HIJA
+    - NIETA
+  - TIO
+    - PRIMO
+*/
+
+
+
+/*
+
+# -> Modulo
+* -> Componente
+- -> Servicio
+
+# ModuloPrincial (AppModule)
+  *  ComponentePrincipal (AppComponent) 
+
+.........................
+# ModuloNotas (NotasModule)
+  *  TablaMostrarMateria 
+     _ [] notasPorMateria
+     _ [] nombreBoton
+     _ [] iconoBoton
+     _ () ejecutoAccion
+  *  listaMaterias
+     _ () seleccionoMateria
 */
