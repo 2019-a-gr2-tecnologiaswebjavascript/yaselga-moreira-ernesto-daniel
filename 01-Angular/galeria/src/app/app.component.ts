@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CarritoService } from './servicios/carrito/carrito.service';
 
 @Component({
   selector: 'app-root',
@@ -6,68 +7,76 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  clase = 'rojo';
-
-  title = 'floreria';
+  title = 'Floreria';
+  claseTitulo = 'rojo';
+  estaMostrando = false;
 
   arregloFlores = [
-    new Flor("Papitas", "a lo bestia"),
-    new Flor("Carnitas", "gorditas"),
-    new Flor("chicas", "cheveres")
+    new Flor("Papitas","A lo bestia"),
+    new Flor("Carnitas","Gorditas"),
+    new Flor("Chicas","Cheveres")
   ];
 
-  arregloFLoresJs = [
+  arregloFloresJs = [
     {
-      nombre: "papitas",
-      descripcion: "a lo bestia"
+      titulo: "Don Jose",
+      nombre: "Papitas",
+      descripcion:"A lo bestia",
+      notas:[
+        'papitas',
+        'empanadas'
+      ]
     },
     {
-      nombre: "carnitas",
-      descripcion: "gorditas"
+      titulo: "Don Pepito",
+      nombre:"Carnitas",
+      descripcion:"Gorditas",
+      notas:[
+        'motes',
+        'ensaldas'
+      ]
     },
     {
-      nombre: "chicas",
-      descripcion: "cheveres"
+      titulo: "Doña Maria",
+      nombre:"Chicas",
+      descripcion:"Cheveres",
+      notas:[
+        'perros calientes',
+        'amburguesas'
+      ]
+
     }
   ]
 
-  cambioChela(evento: boolean){
+  constructor(private readonly _carritoservice:CarritoService){
+
+  }
+
+  cambioChela(evento:boolean){
+    // logica hacerle verde
     console.log('Llego a chela: ', evento);
-    const verde: string = 'verde';
-    this.clase = verde;
-
-
+    this.claseTitulo = 'verde';
   }
 
-  cambioCerveza(evento: boolean){
+  cambioCerveza(evento:boolean){
+    // logica hacerle amarillo
     console.log('Llego a cerveza: ', evento);
-    const verde: string = 'amarillo';
-    this.clase = verde;
+    this.claseTitulo = 'amarillo';
   }
+
+  mostrar(estaMostrando){
+    this.estaMostrando = estaMostrando;
+  }
+
+
 
 }
 
-
 class Flor{
-
-  /*
-
-  nombre: string;
-  descripcion: string;
-
-  constructor(nombre: string, descripcion: string){
-    this.nombre = nombre;
-    this.descripcion = descripcion;
-
+  constructor(
+    public nombre: string,
+    public descripcion:string){
   }
+}
 
-  TODO LO QUE ESTA ARRIBA SE PUEDE HACER EN LA LINEA DE ABAJO!!!!!!
 
-*/
-
-  constructor(public nombre: string, public descripcion: string){
-
-  }
-
-} 
