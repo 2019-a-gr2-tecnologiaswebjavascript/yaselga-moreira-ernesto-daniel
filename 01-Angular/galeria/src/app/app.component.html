@@ -1,12 +1,9 @@
-<h1 class="rojo">Titulo {{title}}</h1>
-<!-- {{interpolacion}}  -->
-<app-item-galeria 
-    *ngFor="let Flor of arregloFloresJS"
-    [textoBoton]="Flor.nombre"
-    [nombreItem]="Flor.descripcion"
-    (cambioChela)="cambioChela($event)"
-    (cambioCerveza)="cambioCerveza($event)"
+<h1 [class]="clase" > Titulo {{title}} </h1>
+<!-- {{ Interpolacion }} -->
+<app-item-galeria *ngFor="let flor of arregloFLoresJs" 
+[nombreItem] = "flor.nombre"
+[textoBoton] = "flor.descripcion"
+(cambioChela) = "cambioChela($event)"
+(cambioCerveza) = "cambioCerveza($event)"
 >
-asd
 </app-item-galeria>
-    
