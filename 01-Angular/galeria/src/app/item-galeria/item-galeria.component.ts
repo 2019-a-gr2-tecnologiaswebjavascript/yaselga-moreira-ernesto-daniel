@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { CarritoService } from '../servicios/carrito/carrito.service';
+import { notStrictEqual } from 'assert';
 
 @Component({
   selector: 'app-item-galeria',
@@ -26,9 +28,13 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
 
   url = "http://www.dna-autoparts.com/23121-thickbox_default/bielas-forjadas-eagle-para-sr20det.jpg";
 
-  notas = [1,2,3,4,5,6,7,8,9,10]
+  @Input()
+  notas;
 
-  constructor() { }
+  // El constructor nos ayuda a hacer el "dependency injection"
+  // Injeccion de dependencias -> Servicios Compartidos
+  // Se puede compartir servicios en otros servicios
+  constructor(private readonly _carritoService:CarritoService ) { }
 
   
 
@@ -57,10 +63,21 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
 
   ngOnInit() {
     console.log("'Empezo'");
+    console.log(this._carritoService.carritoCompras);
   }
 
   ngOnDestroy(){
     console.log('"Termino"');
+  }
+
+  agregarCarrito(valorCarrito){
+    // this._carritoService.carritoCompras.push(valorCarrito);
+    const itemCarrito = {
+      valor:valorCarrito,
+      nombreTienda:this.titulo
+    }
+    this._carritoService.carritoCompras.splice(0,0,itemCarrito);
+    console.log(this._carritoService.carritoCompras);
   }
 
 

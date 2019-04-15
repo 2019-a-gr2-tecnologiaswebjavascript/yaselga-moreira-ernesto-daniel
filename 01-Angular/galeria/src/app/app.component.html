@@ -1,6 +1,10 @@
 <h1 [class]="claseTitulo">Titulo {{title}}</h1>
 <!-- {{interpolacion}}  -->
 
+<pre>
+    {{_carritoservice.carritoCompras | json}}
+</pre>
+
 <button (click)="mostrar(true)">Mostrar</button>
 
 <button (click)="mostrar(false)">Ocultar</button>
@@ -11,6 +15,7 @@
     [titulo]="flor.titulo"
     [textoBoton]="flor.nombre"
     [nombreItem]="flor.descripcion"
+    [notas]="flor.notas"
     (cambioChela)="cambioChela($event)"
     (cambioCerveza)="cambioCerveza($event)"
     >

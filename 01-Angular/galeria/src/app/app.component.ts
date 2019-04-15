@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CarritoService } from './servicios/carrito/carrito.service';
 
 @Component({
   selector: 'app-root',
@@ -21,25 +22,35 @@ export class AppComponent {
       titulo: "Don Jose",
       nombre: "Papitas",
       descripcion:"A lo bestia",
-      // dato:1,
-      // dato1:1.1,
-      // dato3:" asdasd ",
-      // dato4:false,
-      // dato5:true,
-      // dato6:null
+      notas:[
+        'papitas',
+        'empanadas'
+      ]
     },
     {
       titulo: "Don Pepito",
       nombre:"Carnitas",
-      descripcion:"Gorditas"
+      descripcion:"Gorditas",
+      notas:[
+        'motes',
+        'ensaldas'
+      ]
     },
     {
       titulo: "Doña Maria",
       nombre:"Chicas",
-      descripcion:"Cheveres"
+      descripcion:"Cheveres",
+      notas:[
+        'perros calientes',
+        'amburguesas'
+      ]
+
     }
   ]
 
+  constructor(private readonly _carritoservice:CarritoService){
+
+  }
 
   cambioChela(evento:boolean){
     // logica hacerle verde

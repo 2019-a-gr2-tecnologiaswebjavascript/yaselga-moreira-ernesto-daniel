@@ -11,6 +11,8 @@
 (click)="cambiarImagen()">
 
 <!-- Directiva -> *ngFor  -->
-<p *ngFor="let nota of notas">
-   {{nota}}
-</p>
+<div *ngFor="let nota of notas">
+   <button (click)="agregarCarrito(nota)">
+       Añadir: {{nota}}
+   </button>
+</div>
