@@ -27,22 +27,6 @@ export class AppComponent {
       descripcion: "Cheveres"
     }
   ]
-
-  cambioChela(evento:boolean){
-    //logica hacer titulo verde
-    console.log('llego a chela: ',evento)
-    if(this.evento = true){
-      this.url = chelas;
-      this.cambioChela.emit(true);
-    }else{
-
-    }
-  }
-
-  cambioCerveza(evento:boolean){
-    //logica hacer titulo amarillo
-    console.log('llego a cerveza: ',evento)
-  }
 }
 
 
