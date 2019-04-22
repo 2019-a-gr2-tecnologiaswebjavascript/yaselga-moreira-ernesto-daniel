@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { CarritoService } from '../servicios/carrito/carrito.service';
 import { notStrictEqual } from 'assert';
+import { ItemCarritoCompras } from '../interfaces/item-carrito-compras';
 
 @Component({
   selector: 'app-item-galeria',
@@ -70,18 +71,31 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
     console.log('"Termino"');
   }
 
-  agregarCarrito(valorCarrito){
+  agregarCarrito(valorCarrito:string){
     // this._carritoService.carritoCompras.push(valorCarrito);
-    const itemCarrito = {
-      valor:valorCarrito,
-      nombreTienda:this.titulo
-    }
-    this._carritoService.carritoCompras.splice(0,0,itemCarrito);
-    console.log(this._carritoService.carritoCompras);
+    const items:ItemCarritoCompras = {
+      valor: valorCarrito,
+      nombreTienda:this.titulo,
+      fechaCompra:new Date()
+    };
+    const respuestaCarrito = this._carritoService.agregarCarritoDeCompras(items);
+    console.log(respuestaCarrito)
   }
 
 
 }
+
+
+/*
+class CarritoCompraClass implements CarritoComprasInterface{
+  valor:string;
+  nombreTienda:string;
+  fechaCompra?:Date;
+}
+*/
+
+
+
 
 /*
 @DecoratorsClase() 
@@ -158,4 +172,20 @@ ngOnDestroy -> OnDestroy
      _ () ejecutoAccion
   *  listaMaterias
      _ () seleccionoMateria
+*/
+
+
+/* Problema:
+1) Verificar si ya existe ese "item" -> valor
+1.1 Existe)
+  Aumentamos el contador
+  
+  Existe? -> buscar en el arreglo si existe el valor
+
+1.2 No Existe)
+  Creamos el contador y lo seteamos en 1
+
+  
+
+
 */
