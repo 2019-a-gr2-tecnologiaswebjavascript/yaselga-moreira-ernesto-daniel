@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+.contenedor{
+    margin-left: 0px;
+    padding: 40px;
+    margin: 40px;
+    border: 5px black solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+    /*border-style: dashed;*/
+    border-top-color: red;
+    border-bottom-style: dotted;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top: 1%;
+    
+}
+.item-menu{    
+    color:darkblue;
+    text-align: right;
+    padding: 10px;
+    min-width: 20px;
+    min-height: 80px;
+    border: solid white 2px;
+    float: right;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif*/
+}
+.item-menu:hover{
+    color:white;
+    background-color: darkblue;
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+    border: grey solid 2px;
+    min-width: 20px;
+    min-height: 80px;
+    transform: scale(1.5,1.5);
+    float: right;
+    
+}
+.texto-derecha{
+    text-align: right;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
