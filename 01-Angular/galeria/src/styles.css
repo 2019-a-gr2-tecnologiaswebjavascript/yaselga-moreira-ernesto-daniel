@@ -1,5 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
+.contenedor_cabecera{
+    border: 2px black solid;
+}
+
+.divisor_guia{
+    border: 2px gray solid;
+}
+
+.F-menu{
+    display: inline-block;
+    font-size: 12px;
+    padding: 13px 10px 13px 11px;
+    position: relative;
+    line-height: 23px;
+    color:gray;
+}
+.F-menu:hover{
+    color:black;
+    cursor: pointer;   
+}
+
 .contenedor{
     margin-left: 0px;
     padding: 40px;
