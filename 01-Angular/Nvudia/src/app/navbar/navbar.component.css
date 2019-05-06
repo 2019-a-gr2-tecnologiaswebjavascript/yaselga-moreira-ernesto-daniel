@@ -1,0 +1,15 @@
+.btn-menu{
+    color: gray;
+    background-color: black;
+    border: 0px;
+}
+.btn:hover{
+    color: white;
+    background-color: black;
+    border: 0px;
+}
+.btn-submenu{
+    color: black;
+    background-color: white;
+    border: 0px;
+}
