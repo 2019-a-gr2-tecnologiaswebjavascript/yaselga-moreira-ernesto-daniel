@@ -1,0 +1,88 @@
+a {
+    color: #777;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 0;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: -webkit-match-parent;
+    list-style: none;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-color: #e7e7e7;
+}
+
+.navbar-left {
+    float: left;
+}
+
+.navbar-right {
+    float: right!important;
+    margin-right: -15px;
+}
+
+.btn {
+    z-index: 2;
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    padding: 0px 12px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    height: 30px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    text-transform: none;
+    overflow: visible;
+    font: inherit;
+    box-sizing: border-box;
+    align-items: flex-start;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    border-collapse: separate;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border-color: #e6e6e6;
+}
+
+.btn:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
