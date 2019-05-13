@@ -1,0 +1,45 @@
+.tag {
+    text-align: center;
+    background-color: #f6f8fb;
+    border: 0;
+    bottom: 10;
+    top: 0;
+    color: #074d95;
+    display: block;
+    padding: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    border-top: solid 1px #dddddd;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.album-box {
+    width: 100px;
+    height: 150;
+}
+
+.contenedor-albums {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0px;
+    color: #074d95;
+}
+
+.contenedor-imagen {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px;
+    border: solid 1px #dddddd;
+}
+
+.album-info {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid 1px #dddddd;
+    border-bottom: 0;
+    background-color: #ffffff;
+}
