@@ -1,0 +1,25 @@
+Nombre: {{nombre}}
+<br>
+Apellido: {{apellido}}
+<br>
+Consulta: {{q}}
+<br>
+<form 
+#formularioUsuario="ngForm"
+(submit)="guardarUsuario(formularioUsuario)"
+>
+
+  <label for="nombre">Nombre</label>
+  <input id="nombre" name="nombreUsuario" type="text" [(ngModel)]="nombre">
+  <br>
+  <label for="apellido">Apellido</label>
+  <input id="apellido" name="apellidoUsuario" type="text" [(ngModel)]="apellido">
+  <br>
+  <label for="consulta">Consulta a Google</label>
+  <input type="terxt" name="q" id="consulta" [(ngModel)]="q">
+
+  <button>Ir a google</button> <!--Tipo Submit por defecto-->
+  <button type="button">Tipo boton</button>
+  <button type="reset">Tipo reset</button>
+  <button type="submit">Tipo submit</button>
+</form>
