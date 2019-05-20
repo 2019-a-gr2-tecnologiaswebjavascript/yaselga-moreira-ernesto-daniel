@@ -4,22 +4,89 @@ Apellido: {{apellido}}
 <br>
 Consulta: {{q}}
 <br>
+<pre>Valido: {{formularioUsuario.valid}}</pre>
+<pre>Invalido: {{formularioUsuario.invalid}}</pre>
+<pre>Toucherd: {{formularioUsuario.touched}}</pre>
+<pre>Untoucher: {{formularioUsuario.untouched}}</pre>
+<pre>Dirty: {{formularioUsuario.dirty}}</pre>
+<pre>Pristine: {{formularioUsuario.pristine}}</pre>
+<br>  
 <form 
 #formularioUsuario="ngForm"
 (submit)="guardarUsuario(formularioUsuario)"
 >
 
   <label for="nombre">Nombre</label>
-  <input id="nombre" name="nombreUsuario" type="text" [(ngModel)]="nombre">
+  <input 
+  id="nombre" 
+  required 
+  name="nombreUsuario" 
+  type="text" 
+  [(ngModel)]="nombre"
+  #vtNombre="ngModel">
+  <pre>Error: {{vtNombre.errors | json}}</pre>
+  <pre>Valido: {{vtNombre.valid}}</pre>
+  <pre>Invalido: {{vtNombre.invalid}}</pre>
+  <pre>Toucherd: {{vtNombre.touched}}</pre>
+  <pre>Untoucher: {{vtNombre.untouched}}</pre>
+  <pre>Dirty: {{vtNombre.dirty}}</pre>
+  <pre>Pristine: {{vtNombre.pristine}}</pre>
+
+  <p *ngIf="vtNombre.valid">Nombre Valido</p>
+  <p *ngIf="vtNombre.invalid">Nombre Invalido</p>
   <br>
   <label for="apellido">Apellido</label>
-  <input id="apellido" name="apellidoUsuario" type="text" [(ngModel)]="apellido">
+  <input id="apellido"
+  required
+  name="apellidoUsuario"
+  type="text"
+  [(ngModel)]="apellido"
+  #vtApellido="ngModel">
+  <pre>Valido: {{vtApellido.valid}}</pre>
+  <pre>Invalido: {{vtApellido.invalid}}</pre>
+  <pre>Toucherd: {{vtApellido.touched}}</pre>
+  <pre>Untoucher: {{vtApellido.untouched}}</pre>
+  <pre>Dirty: {{vtApellido.dirty}}</pre>
+  <pre>Pristine: {{vtApellido.pristine}}</pre>
   <br>
-  <label for="consulta">Consulta a Google</label>
-  <input type="terxt" name="q" id="consulta" [(ngModel)]="q">
+
+  <label for="correo">Correo</label>
+  <input 
+  id="correo" 
+  required 
+  name="correoUsuario" 
+  type="text"
+  pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+  [(ngModel)]="correo"
+  #vtCorreo="ngModel">
+  <pre>Error: {{vtCorreo.errors | json}}</pre>
+  <pre>Valido: {{vtCorreo.valid}}</pre>
+  <pre>Invalido: {{vtCorreo.invalid}}</pre>
+  <pre>Toucherd: {{vtCorreo.touched}}</pre>
+  <pre>Untoucher: {{vtCorreo.untouched}}</pre>
+  <pre>Dirty: {{vtCorreo.dirty}}</pre>
+  <pre>Pristine: {{vtCorreo.pristine}}</pre>
+
+  <br>
+  <label for="cedula">Cedula</label>
+  <input type="terxt"
+  minlength="10"
+  maxlength="10"
+  pattern="[0-9]*"
+  name="cedula"
+  id="cedula"
+  required
+  [(ngModel)]="cedula"
+  #vtCedula="ngModel">
+  <div *ngIf="vtCedula.errors && vtCedula.dirty">
+    <h1>Errores</h1>
+    <p>Existe un error</p>
+    <p></p>
+  </div>
+  <pre>Error: {{vtCedula.errors | json}}</pre>
 
   <button>Ir a google</button> <!--Tipo Submit por defecto-->
   <button type="button">Tipo boton</button>
   <button type="reset">Tipo reset</button>
-  <button type="submit">Tipo submit</button>
+  <button type="submit" [disabled]="formularioUsuario.invalid">Tipo submit</button>
 </form>
