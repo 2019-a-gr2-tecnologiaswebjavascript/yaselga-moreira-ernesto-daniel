@@ -1,0 +1,53 @@
+<body>
+  
+  <section style="text-align: center;" class="cover">
+      <header class="col-xs-12 center"
+          style="text-align: center; padding-top: 100px; color: white; text-shadow: .5px .5px 3px rgba(0,0,0,.25); background: linear-gradient(#1e191900, #f0f0f0); height: 100%;">
+          <h1 class="text-54px book-weight" style="color: #02a9ff;">Miku Database</h1>
+          <a href="album">PAGINA ALBUM</a>
+          <p class="text-20px" style="padding: 0 15%;">MikuDB has always been a place for Vocaloid music lovers to
+              find their favourite albums they couldn't get elsewhere on the internet. </p>
+          <div style="margin-top:20px;float:none !important;text-align:center">
+          </div>
+      </header>
+  </section>
+
+
+  <div class="main">
+      <div class="col-md-1"></div>
+
+      <div class="col-md-10 contenedor-carrusel">
+          <div class="section">
+              <h3>New Releases</h3>
+          </div>
+          <app-carrusel></app-carrusel>
+          <div class="section">
+              <br>
+              <h3>Newest Addition</h3>
+          </div>
+          <hr>
+          <div class="contenedor-items">
+              <app-album-item *ngFor="let album of arregloAlbum" [Tag]="album.Tag" [Descripcion]="album.Descripcion"
+                  [Foto]="album.Foto"></app-album-item>
+              <div class="col-md-5"></div>
+              <div class="col-md-2">
+                  <a href="#"><button type="button" class="btn btn-sc">View more albums</button></a>
+              </div>
+              <div class="col-md-5"></div>
+          </div>
+          <div class="contenedor-items">
+              <app-album-item *ngFor="let album of arregloVideos" [Tag]="album.Tag" [Descripcion]="album.Descripcion"
+                  [Foto]="album.Foto"></app-album-item>
+              <div class="col-md-5"></div>
+              <div class="col-md-2">
+                  <a href="#"><button type="button" class="btn btn-sc">View more videos</button></a>
+              </div>
+              <div class="col-md-5"></div>
+          </div>
+
+      </div>
+      <div class="col-md-1"></div>
+      
+  </div>
+
+</body>

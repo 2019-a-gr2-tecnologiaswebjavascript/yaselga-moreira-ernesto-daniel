@@ -24,6 +24,11 @@ a {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    padding-top: 10px;
+}
+
+.navbar-brand{
+    margin-top: 20px;
 }
 
 .navbar {
@@ -37,12 +42,12 @@ a {
 
 .navbar-right {
     float: right!important;
-    margin-right: -15px;
+    margin-right: 0px;
 }
 
 .btn {
     z-index: 2;
-    margin-left: -1px;
+    margin-left: 1px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     position: relative;
