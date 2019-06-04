@@ -1,0 +1,84 @@
+
+
+<!--
+nombre:'Franco-Canadiense',
+      liga: 'Barrial',
+      fechaCreacion:'2001-06-14',
+      numeroCopasInternacionales:2,
+      campeonActual:true,
+-->
+
+
+<div class="container ">
+
+  <div class="d-flex ">
+
+    <div class="p-2 shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 100px">
+      <h2 class="display-4">
+        <strong>Equipos</strong>
+      </h2>
+      <form
+        #formularioBusquedaEquipo="ngForm"
+        novalidate
+        (submit)="buscarEquipo()"
+      >
+        <div class="form-group d-flex">
+          <label for="nombreEquipoConsulta" class="p-2">Equipo</label>
+          <input
+            class="form-control"
+            type="text"
+            id="nombreEquipoConsulta"
+            name="nombreEquipoConsulta"
+            placeholder="Nombre de Equipo"
+            [(ngModel)]="nombreEquipoConsulta"
+            required
+          >
+          <div class="p-2">
+            <button class="btn btn-info" type="submit" style="margin-top: -10px">Buscar</button>
+          </div>
+          <div class="p-2">
+            <a [routerLink]="['/crear-equipo']"><button  type="button" class="btn btn-success btn-block" style="margin-top: -10px">Crear</button></a>
+          </div>
+        </div>
+
+
+
+      </form>
+
+
+    </div>
+  </div>
+
+  <div class="d-flex ">
+      <div class="p-2">
+        <table class="table table-dark">
+          <thead class="thead-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Nacionalidad</th>
+            <th>Fecha Creacion</th>
+            <th>Personas</th>
+            <th>Picante</th>
+            <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="fila" *ngFor="let equipo of equipos">
+            <td>{{equipo.nombre}}</td>
+            <td>{{equipo.liga}}</td>
+            <td>{{equipo.fechaCreacion}}</td>
+            <td>{{equipo.numeroCopasInternacionales}}</td>
+            <td>{{equipo.campeonActual}}</td>
+            <td>
+              <button class="btn btn-danger btn-block" style="margin-bottom: 10px" (click)="eliminarEquipo(equipo)">Eliminar</button>
+              <a [routerLink]="['/plato',equipo.id,'ingredientes']">
+                <button class="btn btn-info btn-block">Ingredientes</button>
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+</div>

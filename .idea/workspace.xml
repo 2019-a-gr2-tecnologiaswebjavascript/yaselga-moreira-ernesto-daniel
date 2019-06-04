@@ -2,82 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1614574b-b4f9-454a-b308-85228596fa41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ExamenIB/src/app/interfaces/factura-detalle.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExamenIB/src/app/interfaces/factura.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExamenIB/src/app/interfaces/ingrediente.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExamenIB/src/app/interfaces/plato.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/browserslist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/e2e/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/e2e/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/e2e/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/e2e/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar-hijos/administrar-hijos.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar-hijos/administrar-hijos.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar-hijos/administrar-hijos.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar-hijos/administrar-hijos.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar/administrar.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar/administrar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar/administrar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar/administrar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/administrar/administrar.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/autenticar.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/autenticar.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/auth.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/auth.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/login/login.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/login/login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/login/login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/menu-principal/menu-principal.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/menu-principal/menu-principal.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/menu-principal/menu-principal.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/app/menu-principal/menu-principal.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/assets/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen-1B/examen-IB/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -93,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/componentes/login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="576">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
@@ -105,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/componentes/home/home.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="336">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -117,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/plato.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="120">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -126,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/ingrediente.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="240">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -135,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/factura.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="144">
               <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
@@ -149,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/app-routing.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="144">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -161,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/servicios/auth/login.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="216">
               <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -214,10 +139,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="26" />
-    <option name="width" value="1594" />
-    <option name="height" value="1286" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-6" />
+    <option name="y" value="4" />
+    <option name="width" value="1587" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -311,10 +237,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="excluded.www.directory" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Examen-1B-Velasco-Andres-master/Examen-1B" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -322,7 +249,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/03-Rutas/rutas/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -348,17 +275,17 @@
       <updated>1559598223767</updated>
       <workItem from="1559598230631" duration="1309000" />
       <workItem from="1559599664695" duration="2919000" />
+      <workItem from="1559648225373" duration="1640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4228000" />
+    <option name="totallyTimeSpent" value="5868000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1594" height="1286" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20216148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1654373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -382,19 +309,16 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/app-routing.module.ts">
+    <entry file="file://$PROJECT_DIR$/ExamenIB/angular.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="233">
+          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/componentes/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="576">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
@@ -402,9 +326,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/componentes/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/plato.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/ingrediente.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/factura.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/servicios/auth/login.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="216">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
@@ -419,44 +384,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExamenIB/angular.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/componentes/home/home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/ingrediente.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/plato.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExamenIB/src/app/interfaces/factura.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
