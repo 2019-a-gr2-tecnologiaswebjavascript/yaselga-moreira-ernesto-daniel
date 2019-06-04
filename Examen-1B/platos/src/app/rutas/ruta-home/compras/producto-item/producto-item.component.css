@@ -1,0 +1,21 @@
+.circulo{
+  border-radius: 80%;
+  border: 10px solid darkred;
+  background-color: darkred;
+  color: white;
+  width:  40px;
+  height: 40px;
+  text-wrap: inherit;
+  text-align: center;
+}
+
+.numero{
+  border-radius: 10%;
+  border: 10px solid #17a2b8;
+  background-color: #17a2b8;
+  color: white;
+
+  text-wrap: inherit;
+  text-align: center;
+
+}

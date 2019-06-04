@@ -1,0 +1,137 @@
+
+<div class="container">
+
+  <div class="d-flex justify-content-lg-between">
+    <div class="p-2 shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 100px">
+      <h2 class="display-4">
+        Fonda Doña Florinda
+      </h2>
+      <h2>Datos Cliente</h2>
+
+      <div *ngIf="vtCedula.errors && vtCedula.dirty" class="errores">
+        <h6>Error con la cedula</h6>
+        <ul>
+          <li *ngIf="vtCedula.errors.minlength">Escriba minimo 10 caracteres</li>
+          <li *ngIf="vtCedula.errors.pattern">Solo se aceptan numeros</li>
+          <li *ngIf="vtCedula.errors.required">Este campo es obligatorio</li>
+        </ul>
+
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <div class="p-2">
+          <form
+            #formularioCrearFactura="ngForm"
+            (ngSubmit)="generarFactura(formularioCrearFactura)"
+            novalidate
+          >
+            <div class="d-flex">
+              <div class="form-group p-2">
+                <label for="nombreCliente"></label>
+                <input
+                  type="text"
+                  [(ngModel)]="nombreCliente"
+                  id="nombreCliente"
+                  name="nombreCliente"
+                  required
+                  class="form-control"
+                  placeholder="Nombre"
+                >
+              </div>
+              <div class="form-group p-2">
+                <label for="cedulaRuc"></label>
+                <input
+                  type="text"
+                  [(ngModel)]="cedulaRuc"
+                  id="cedulaRuc"
+                  name="cedulaRuc"
+                  required
+                  class="form-control"
+                  placeholder="Cedula/Ruc"
+                  maxlength="13"
+                  minlength="10"
+                  pattern="([0-9]{10})"
+                  #vtCedula = "ngModel"
+                >
+              </div>
+
+            </div>
+
+            <div class="d-flex">
+              <div class="form-group p-2">
+                <label for="direccion"></label>
+                <input
+                  type="text"
+                  [(ngModel)]="direccion"
+                  id="direccion"
+                  name="direccion"
+                  required
+                  class="form-control"
+                  placeholder="Direccion"
+                >
+              </div>
+              <div class="form-group p-2">
+                <label for="telefono"></label>
+                <input
+                  type="text"
+                  id="telefono"
+                  name="telefono"
+                  [(ngModel)]="telefono"
+                  required
+                  #vtNombreCom="ngModel"
+                  class="form-control"
+                  placeholder="Telefono"
+                >
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <label for="correo"></label>
+              <div class="form-group p-2 flex-fill bd-highlight">
+                <input
+                  type="text"
+                  [(ngModel)]="correo"
+                  id="correo"
+                  name="correo"
+                  required
+                  class="form-control"
+                  placeholder="Correo Electrónico"
+                />
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="p-2 flex-fill">
+                <button type="submit" class="btn btn-success" [disabled]="formularioCrearFactura.invalid">Vender</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="p-2 flex-fill bd-highlight">
+          <app-producto-item  (quitoProducto)="quitoProducto($event)">
+
+          </app-producto-item>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+    <div class="p-2 shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 100px">
+      <h2>Vendedor: {{cajero}}</h2>
+
+
+      <div *ngFor="let jugador of platos" class="d-flex justify-content-between">
+        <div class="p-2">{{ jugador.nombre }} </div>
+        <div class="p-2"><button type="button" class="btn btn-info"(click)="agregar(jugador)">Agregar</button></div>
+      </div>
+
+      <h3>Recio Final: ${{total}}</h3>
+    </div>
+
+  </div>
+</div>
+

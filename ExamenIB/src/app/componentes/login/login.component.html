@@ -1,0 +1,19 @@
+<div class="contenedor-login">
+  <div class="d_flex justify-content-center">
+    <div class="p-2 shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 100px">
+        <form 
+        #puerta="ngForm"
+        novalidate
+        (submit)="guardar(puerta)">
+          <div class="form-group">
+            <label for="usuario">INGRESE UN USUARIO</label>
+            <input class="form-control" type="text" name="usuario" id="usuario" [(ngModel)]="usuario" required #vtNombre="ngModel">
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="p-2"><button type="submit">INGRESAR</button></div>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+

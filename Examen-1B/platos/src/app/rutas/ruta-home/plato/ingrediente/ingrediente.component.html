@@ -1,0 +1,78 @@
+<div class="container">
+<div>
+
+  <div class="d-flex">
+      <div class="p-2 shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 100px">
+        <h2 class="display-4">Jugadores</h2>
+        <form
+          #formularioBusqueda="ngForm"
+          novalidate
+          (submit)="buscarIngredientes(formularioBusqueda)"
+        >
+
+          <div class="d-flex">
+              <div class="p-2 form-group">
+                <label for="nombreIngrediente"></label>
+                <input
+                  placeholder="Nombre Jugador"
+                  class="form-control"
+                  type="text"
+                  id="nombreIngrediente"
+                  name="nombreIngrediente"
+                  [(ngModel)]="nombreIngrediente"
+                  required
+                  #vtNombre="ngModel"
+                >
+              </div>
+            <div class="p-2">
+              <button class="btn btn-info" type="submit" style="margin-top: 25px">Buscar</button>
+            </div>
+            <div class="p-2">
+              <a [routerLink]="['/crear',idPlato]">
+                <button type="button" class="btn btn-success" style="margin-top: 25px">Crear</button>
+              </a>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+  </div>
+
+  <div class="d-flex">
+    <div class="p-2">
+      <table class="table table-dark">
+        <thead class="thead-dark">
+        <tr>
+          <th>idPlato</th>
+          <th>Racion</th>
+          <th>Ingrediente</th>
+          <th>Descripcion</th>
+          <th>tipo</th>
+          <th>Fecha Expiracion</th>
+          <th>opcional</th>
+          <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="fila" *ngFor="let jugador of ingredientes">
+          <td>{{jugador.idEquipo}}</td>
+          <td>{{jugador.numeroCamiseta}}</td>
+          <td>{{jugador.nombreCamiseta}}</td>
+          <td>{{jugador.nombreCompletoJugador}}</td>
+          <td>{{jugador.poderEspecialDos}}</td>
+          <td>{{jugador.fechaIngresoEquipo}}</td>
+          <td>{{jugador.goles}}</td>
+
+          <td> <button class="btn btn-danger" (click)="borrarIngredientes(jugador.id)">Eliminar</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+<router-outlet></router-outlet>
+</div>

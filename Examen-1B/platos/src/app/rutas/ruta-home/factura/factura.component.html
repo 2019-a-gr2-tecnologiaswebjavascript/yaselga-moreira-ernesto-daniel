@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="d-flex">
+      <div class="p-2 p-3 mb-5 bg-white" style="margin-top: 100px">
+        <h2 class="display-4">
+          Facturas
+        </h2>
+        <form
+          #formularioBusquedaFactura="ngForm"
+          novalidate
+          (submit)="buscarFactura()"
+        >
+          <div class="d-flex">
+              <div class="p-2 form-group" >
+                <label for="nombreConsulta">Buscar</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="nombreConsulta"
+                  name="nombreConsulta"
+                  [(ngModel)]="nombreConsulta"
+                  required
+                  placeholder="valor"
+                  maxlength="20"
+                >
+              </div>
+              <div class="p-2">
+                <button class="btn btn-info" type="submit" style="margin-top: 30px">Buscar</button>
+              </div>
+          </div>
+
+        </form>
+      </div>
+  </div>
+
+
+
+
+  <table class="table table-bordered table-dark">
+    <thead>
+    <tr>
+      <th>Comprador</th>
+      <th>Cajero</th>
+      <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="fila" *ngFor="let factura of facturas">
+      <td>{{factura.cliente.nombreCliente}}</td>
+      <td>{{factura.cajero}}</td>
+      <td>$ {{factura.total}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

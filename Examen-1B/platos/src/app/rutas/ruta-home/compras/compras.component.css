@@ -1,0 +1,6 @@
+.errores{
+  background-color: darkred;
+  color: white;
+  transition: 0.3s;
+  border-radius: 5px;
+}

@@ -1,0 +1,17 @@
+
+<table class="table table-hover">
+  <thead>
+      <tr>
+        <th>Plato</th>
+        <th>Cantidad</th>
+        <th>Quitar</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of listaCompras" >
+      <td class="p-2">{{ producto.nombre }} </td>
+      <td class="p-2"><div class="numero">{{ producto.cantidad }}</div> </td>
+      <td class="p-2"><button class="btn btn-danger" (click)="quitar(producto)">Quitar</button></td>
+    </tr>
+  </tbody>
+</table>
