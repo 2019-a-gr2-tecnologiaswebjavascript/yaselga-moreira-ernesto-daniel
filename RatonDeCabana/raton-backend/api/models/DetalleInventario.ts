@@ -1,5 +1,5 @@
 /**
- * Producto.js
+ * DetalleInventario.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -8,19 +8,29 @@
 module.exports = {
 
   attributes: {
-    marca:{
-      type: 'string'   
+    id:{
+      type:'number',
+      required:true
     },
-    nombre:{
-      type:'string',
-      required: true
+    fechaCompra:{
+      type:'number'
     },
-    //Configuracion Padre
-    arregloInventarioProducto:{ // nombre de los hijos
-      collection:'DetalleInventario', // modelo a relacionarse(hijo)
-      via:'fkProducto' //nombre de atributo Foreign Key (Hijo)
-    }
-    
+    fechaExpiracion:{
+      type:'number'
+    },
+    cantidad:{
+      type:'number'
+    },
+    //configuracion HIJO
+    fkInventario:{ //nombre del campo FK
+      model:'Inventario', //Modelo a relacionarse (PAPA)
+      required:true
+    },
+    fkProducto:{
+      model:'Producto',
+      required:true //opcional
+    },
+
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
