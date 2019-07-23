@@ -12,6 +12,9 @@ module.exports = {
       type: 'string',   
       required: true
     },
+    descripcion:{
+      type: 'string'
+    },
     telefono:{
       type:'string',
       required: true

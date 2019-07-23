@@ -8,12 +8,30 @@
 module.exports = {
 
   attributes: {
-    marca:{
-      type: 'string'   
-    },
     nombre:{
       type:'string',
       required: true
+    },
+    marca:{
+      type: 'string'   
+    },
+    magnitud:{
+      type: 'string'
+    },
+    cantidad:{
+      type: 'number'
+    },
+    formato:{
+      type: 'string'
+    },
+    observacion:{
+      type: 'string'
+    },
+    tipo:{
+      type: 'string'
+    },
+    precio:{
+      type: 'number'
     },
     //Configuracion Padre
     arregloInventarioProducto:{ // nombre de los hijos
