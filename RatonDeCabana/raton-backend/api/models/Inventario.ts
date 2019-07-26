@@ -12,19 +12,20 @@ module.exports = {
       type:'number',
       required:true
     },
-    idProducto:{
-      type:'number',
-      required:true
-    },
     cantidad:{
       type:'number',
       required:true
     },
     //configuracion de papa
-    arregloProductoUsuario:{
+    arregloProductoInventario:{
       collection: 'DetalleInventario',
       via:'fkInventario'
-    }
+    },
+    //configuraion de hijo
+    fkProducto:{
+      model:'Producto',
+      required:true //opcional
+    },
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗

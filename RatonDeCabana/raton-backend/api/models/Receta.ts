@@ -8,6 +8,30 @@
 module.exports = {
 
   attributes: {
+    id:{
+      type:'number',
+      required: true
+    },
+    nombre:{
+      type:'string',
+      required: true
+    },
+    descripcion:{
+      type: 'string'   
+    },
+    magnitud:{
+      type: 'string'
+    },
+    cantidadPorciones:{
+      type: 'number'
+    },
+    //configuracion de papa
+    arregloProductoReceta:{
+      collection: 'Ingrediente',
+      via:'fkReceta'
+    }
+
+    
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗

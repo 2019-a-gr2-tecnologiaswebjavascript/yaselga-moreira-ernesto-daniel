@@ -26,10 +26,7 @@ module.exports = {
       model:'Inventario', //Modelo a relacionarse (PAPA)
       required:true
     },
-    fkProducto:{
-      model:'Producto',
-      required:true //opcional
-    },
+    
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗

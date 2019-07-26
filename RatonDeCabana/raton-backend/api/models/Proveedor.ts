@@ -8,6 +8,10 @@
 module.exports = {
 
   attributes: {
+    id:{
+      type: 'number',
+      required: true
+    },
     nombre:{
       type: 'string',   
       required: true
@@ -24,7 +28,18 @@ module.exports = {
     },
     nivelDeConfianza:{
       type:'number',
+    },
+    //Configuracion Padre
+    arregloObservacion:{ // nombre de los hijos
+      collection:'Observacion', // modelo a relacionarse(hijo)
+      via:'fkProveedor' //nombre de atributo Foreign Key (Hijo)
+    },
+    arregloProdcuto:{
+      collection:'Producto',
+      via:'fkProveedor'
     }
+    
+    
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
