@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
+import { ClienteService } from '../servicios/cliente.service';
+//import { IonicPage, NavController } from 'ionic-angular';
+import { Component } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -14,4 +17,23 @@ import { Tab2Page } from './tab2.page';
   ],
   declarations: [Tab2Page]
 })
-export class Tab2PageModule {}
+export class Tab2PageModule {
+  users: any[] = [];
+
+  constructor(
+    //public navCtrl: NavController,
+    public userService: ClienteService
+  ) {}
+
+  ionViewDidLoad(){
+    this.userService.getUsers()
+    .subscribe(
+      (data) => { // Success
+        this.users = data['results'];
+      },
+      (error) =>{
+        console.error(error);
+      }
+    )
+  }
+}
