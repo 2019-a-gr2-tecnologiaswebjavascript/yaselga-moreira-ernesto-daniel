@@ -12,14 +12,20 @@
  * For more information on configuring datastores, check out:
  * https://sailsjs.com/config/datastores
  */
+const sqlite3 = require('sqlite3');
 
 module.exports.datastores = {
 
-  default: {
-    
-    adapter: 'sails-mysql',
-    url: 'mysql://root:root@127.0.0.1:32769/ratonDB',
 
+  default: {
+
+    //adapter: 'sails-mysql',
+    //url: 'mysql://root:root@127.0.0.1:32771/ratonDB',
+
+    adapter: 'sails-sqlite3',
+    filename: 'equipos.db',
+    mode: sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
+    verbose: false
   },
 
 
