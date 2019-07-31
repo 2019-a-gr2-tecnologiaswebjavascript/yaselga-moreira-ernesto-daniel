@@ -1,0 +1,60 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-start [size]="1"></ion-col>
+      <ion-col align-self-center>
+        <h2>Crear Equipo</h2>
+        <form #formulario="ngForm" (ngSubmit)="crearEquipo(formulario)"  class="example-form">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Ingresa un nombre"  [(ngModel)]="equipo.nombre" name="nombre">
+            <mat-error *ngIf="formControl.hasError('required')">
+              Ingresa un nombre
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Liga</mat-label>
+            <input matInput placeholder="Ingresa la liga del equipo" type="text"  [(ngModel)]="equipo.liga" name="liga">
+            <mat-error *ngIf="formControl.hasError('required')">
+              Ingresa una liga
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Copas</mat-label>
+            <input matInput placeholder="Ingresa el número de copas" [type]="'number'" [(ngModel)]="equipo.copasInt" name="copas">
+            <mat-error *ngIf="formControl.hasError('min')">
+              Ingresa un núzmero mayor o igual a 0
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Fecha creacion</mat-label>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            <input matInput [matDatepicker]="picker" name="fechaCreacion" placeholder="Ingresa una fecha"  [(ngModel)]="equipo.fechaCreacion"
+                   required>
+            <mat-error *ngIf="formControl.hasError('required')">
+              Ingresa una fecha
+            </mat-error>
+          </mat-form-field>
+            <div class="example-full-width" style="padding-bottom: 20px;padding-top: 20px">
+            <mat-label>Campeon actual: </mat-label>
+              <mat-radio-group
+                      aria-labelledby="example-radio-group-label"
+                      [(ngModel)]="equipo.campeonAct"
+                        name="campeon"
+              >
+                  <mat-radio-button class="example-radio-button"  [value]="true">
+                      Si
+                  </mat-radio-button>
+                  <mat-radio-button class="example-radio-button"  [value]="false">
+                      No
+                  </mat-radio-button>
+              </mat-radio-group>
+            </div>
+          <button mat-raised-button color="primary" class="example-full-width">Registrar</button>
+        </form>
+      </ion-col>
+      <ion-col align-self-end [size]="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

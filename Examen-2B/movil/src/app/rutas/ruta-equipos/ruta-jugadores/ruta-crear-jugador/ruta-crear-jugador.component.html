@@ -1,0 +1,67 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-start [size]="1"></ion-col>
+      <ion-col align-self-center>
+        <h2>Crear Jugador</h2>
+        <form #formulario="ngForm" (ngSubmit)="crearJugador(formulario)"  class="example-form">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Ingresa un nombre"  [(ngModel)]="jugador.nombre" name="nombre">
+            <mat-error *ngIf="formControl.hasError('required')">
+              Ingresa un nombre
+            </mat-error>
+          </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Poder especial</mat-label>
+                <input matInput placeholder="Ingresa un poder Especial"  [(ngModel)]="jugador.poderEspecialDos" name="poder">
+                <mat-error *ngIf="formControl.hasError('required')">
+                    Ingresa un poder especial
+                </mat-error>
+            </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre Camiseta</mat-label>
+            <input matInput placeholder="Ingresa el nombre de camiseta" type="text"  [(ngModel)]="jugador.nombreCamisa" name="camiseta">
+            <mat-error *ngIf="formControl.hasError('required')">
+              Ingresa una nombre de camiseta
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Número camiseta</mat-label>
+            <input matInput placeholder="Ingresa el número de camiseta" [type]="'number'" [(ngModel)]="jugador.goles" name="goles">
+            <mat-error *ngIf="formControl.hasError('min')">
+              Ingresa un núzmero mayor o igual a 0
+            </mat-error>
+          </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Precio</mat-label>
+                <input matInput placeholder="Ingresa el precio" [type]="'number'" [(ngModel)]="jugador.precio" name="precio">
+                <mat-error *ngIf="formControl.hasError('min')">
+                    Ingresa un núzmero mayor o igual a 0
+                </mat-error>
+            </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Goles</mat-label>
+            <input matInput placeholder="Ingresa el número de goles" [type]="'number'" [(ngModel)]="jugador.numeroCamisa" name="nucamiseta">
+            <mat-error *ngIf="formControl.hasError('min')">
+              Ingresa un núzmero mayor o igual a 0
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Fecha de Ingreso</mat-label>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <input matInput [matDatepicker]="picker" name="fechaIngreso" placeholder="Ingresa una Fecha de ingreso"  [(ngModel)]="jugador.fechaIngresoEquipo"
+                   required>
+            <mat-error *ngIf="formControl.hasError('required')">
+              Ingresa una fecha
+            </mat-error>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" class="example-full-width">Registrar</button>
+        </form>
+      </ion-col>
+      <ion-col align-self-end [size]="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

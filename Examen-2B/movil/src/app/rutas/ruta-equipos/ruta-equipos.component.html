@@ -1,0 +1,40 @@
+<ion-content>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="add" [routerLink]="['','equipos','crear']"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="1"></ion-col>
+            <ion-col>
+                <h2 (click)="cargarListaEquipos()">Equipos: </h2>
+                <form
+                    #formularioBusqueda="ngForm"
+                    (change)="buscar()"
+                    (input)="buscar()"
+                    (submit)="buscar()"
+                    class="example-form"
+                >
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Buscar</mat-label>
+                        <input matInput name="busqueda" [(ngModel)]="nombreBusqueda" placeholder="Buscar por nombre">
+                    </mat-form-field>
+                </form>
+                <ion-list>
+                    <ion-item *ngFor="let equipo of equipos">
+                        <ion-label>{{equipo.nombre}}</ion-label>
+                        <button mat-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item [routerLink]="['','equipo',equipo.id,'jugadores']">Jugadores</button>
+                            <button mat-menu-item (click)="presentarAlertaEliminar(equipo)">Eliminar</button>
+                        </mat-menu>
+                    </ion-item>
+
+                </ion-list>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
