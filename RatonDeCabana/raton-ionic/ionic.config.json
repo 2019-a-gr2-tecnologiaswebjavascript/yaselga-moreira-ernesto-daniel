@@ -1,0 +1,7 @@
+{
+  "name": "raton-ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

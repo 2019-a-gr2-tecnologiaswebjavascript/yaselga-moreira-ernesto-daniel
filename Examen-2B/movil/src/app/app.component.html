@@ -1,0 +1,54 @@
+<ion-app>
+    <ion-menu side="start">
+        <ion-header>
+            <ion-toolbar translucent>
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label *ngIf="estaLogeado()">Bienvenido: {{nombreUsuario()}}</ion-label>
+                </ion-item>
+                <ion-item *ngIf="!estaLogeado()" [routerLink]="['/','login']">
+                    <ion-icon name="person" slot="start"></ion-icon>
+                    <ion-label >Login</ion-label>
+                </ion-item>
+                <ion-item *ngIf="!estaLogeado()" [routerLink]="['/','registro']">
+                    <ion-icon name="person-add" slot="start"></ion-icon>
+                    <ion-label >Registro</ion-label>
+                </ion-item>
+                <ion-item *ngIf="estaLogeado()" [routerLink]="['/','equipos']">
+                    <ion-icon name="football" slot="start"></ion-icon>
+                    <ion-label >Administrar grupos</ion-label>
+                </ion-item>
+                <ion-item *ngIf="estaLogeado()" [routerLink]="['/','compras']">
+                    <ion-icon name="cart" slot="start"></ion-icon>
+                    <ion-label >Revisar Compras</ion-label>
+                </ion-item>
+                <ion-item *ngIf="estaLogeado()" [routerLink]="['/','comprar']">
+                    <ion-icon name="card" slot="start"></ion-icon>
+                    <ion-label >Comprar</ion-label>
+                </ion-item>
+                <ion-item *ngIf="estaLogeado()" (click)="salir()">
+                    <ion-icon name="exit" slot="start"></ion-icon>
+                    <ion-label >Salir</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" main>
+        <ion-header>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>Equipos de futbol</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content padding>
+            <ion-router-outlet></ion-router-outlet>
+        </ion-content>
+    </div>
+</ion-app>

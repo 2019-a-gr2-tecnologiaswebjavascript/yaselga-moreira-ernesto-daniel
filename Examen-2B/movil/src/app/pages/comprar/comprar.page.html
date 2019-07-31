@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comprar</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+          <ion-row>
+              <ion-col [size]="1"></ion-col>
+              <ion-col>
+                              <mat-panel-title>
+                                  <h2>Jugadores:</h2>
+                              </mat-panel-title>
+                          <ion-list>
+                              <h4>Total: <ion-badge color="success">$ {{obtenerTotal()}}</ion-badge></h4>
+                              <ion-item *ngFor="let jugador of jugadores">
+                                  <ion-label>{{jugador.nombre}}</ion-label>
+                                  <button mat-mini-fab (click)="agregar(jugador)" color="warn" type="button">
+                                      <mat-icon>add</mat-icon>
+                                  </button>
+                              </ion-item>
+                          </ion-list>
+                          <ion-list>
+                              <h4>Detalles: </h4>
+                              <ion-item *ngFor="let detalle of obtenerDetalles()" class="d-flex justify-content-between">
+                                  <ion-label>{{ detalle.fkJugador.nombre }}</ion-label>
+                                  <ion-badge color="secondary">{{detalle.cantidad}}</ion-badge>
+                                  <button mat-mini-fab  (click)="quitar(detalle)" color="warn" type="button">
+                                      <mat-icon>remove</mat-icon>
+                                  </button>
+                              </ion-item>
+                          </ion-list>
+                  <mat-accordion>
+                        <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                          <mat-panel-title>
+                              <h2>Datos del cliente</h2>
+                          </mat-panel-title>
+                      </mat-expansion-panel-header>
+                       <form
+                                    #formularioCrearFactura="ngForm"
+                                    (ngSubmit)="generarFactura(formularioCrearFactura)"
+                                    class="example-form"
+                            >
+                                <mat-form-field class="example-full-width" appearance="outline">
+                                    <mat-label>Nombre</mat-label>
+                                    <input  matInput
+                                            type="text"
+                                            [(ngModel)]="factura.nombre"
+                                            id="nombreCliente"
+                                            name="nombreCliente"
+                                            placeholder="Nombre Cliente"
+                                            required
+                                    >
+
+                                    <mat-error *ngIf="formControl.hasError('required')">
+                                        Ingresa una Cedula o RUC
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-form-field class="example-full-width" appearance="outline">
+                                    <mat-label>Cedula/RUC</mat-label>
+                                    <input matInput
+                                           type="text"
+                                           [(ngModel)]="factura.rucCedula"
+                                           name="cedulaRuc"
+                                           placeholder="Cedula/Ruc"
+                                           maxlength="13"
+                                           minlength="10"
+                                           pattern="([0-9]{10})"
+                                           required
+                                    >
+                                    <mat-error *ngIf="formControl.hasError('required')">
+                                        Ingresa una cedula
+                                    </mat-error>
+                                </mat-form-field>
+
+
+                                <mat-form-field class="example-full-width" appearance="outline">
+                                    <mat-label>Direccion</mat-label>
+                                    <input matInput
+                                           type="text"
+                                           [(ngModel)]="factura.direccion"
+                                           name="direccion"
+                                           required
+                                           placeholder="Direccion"
+                                    >
+                                    <mat-error *ngIf="formControl.hasError('required')">
+                                        Ingresa una direccion
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-form-field class="example-full-width" appearance="outline">
+                                    <mat-label>Telefono</mat-label>
+                                    <input matInput
+                                           type="text"
+                                           name="telefono"
+                                           [(ngModel)]="factura.telefono"
+                                           required
+                                           placeholder="Telefono"
+                                    >
+                                    <mat-error *ngIf="formControl.hasError('required')">
+                                        Ingresa un telefono
+                                    </mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field class="example-full-width" appearance="outline">
+                                    <mat-label>Correo</mat-label>
+                                    <input matInput
+                                           type="text"
+                                           [(ngModel)]="factura.correo"
+                                           name="correo"
+                                           required
+                                           placeholder="Correo Electrónico"
+                                    />
+
+                                    <mat-error *ngIf="formControl.hasError('email') && !formControl.hasError('required')">
+                                        Ingresa un correo que sea válido
+                                    </mat-error>
+                                </mat-form-field>
+                                <button mat-raised-button color="primary" type="submit" class="example-full-width">
+                                    Generar Factura
+                                </button>
+
+                            </form>
+                  </mat-expansion-panel>
+                  </mat-accordion>
+              </ion-col>
+              <ion-col [size]="1"></ion-col>
+          </ion-row>
+  </ion-grid>
+</ion-content>

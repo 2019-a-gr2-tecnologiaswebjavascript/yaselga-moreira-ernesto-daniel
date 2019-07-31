@@ -1,0 +1,36 @@
+<ion-content><!--class="bg-image no-scroll"-->
+  <ion-grid>
+    <ion-row>
+      <ion-col  [size]="1"></ion-col>
+      <ion-col align-self-center="">
+
+        <h2 class="ion-align-items-center">Ingreso al sistema:</h2>
+        <div>
+          <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/6-sports-stadium-tunnel-allan-swart.jpg" alt="img" style="width: 45%;height: auto">
+        </div>
+        <form
+                #formulario = "ngForm"
+                (ngSubmit)="login(formulario)"
+                class="example-form">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Correo</mat-label>
+            <input matInput placeholder="Ingresa un correo electrónico" type="text" [formControl]="emailFormControl" [(ngModel)]="auth.correo" name="correo">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Ingresa un correo válido
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">Ingrese un email</mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Clave</mat-label>
+            <input matInput placeholder="Ingresa tu clave" [type]="'password'" [formControl]="nombreClaveFormControl" [(ngModel)]="auth.clave" name="clave">
+            <mat-error *ngIf="nombreClaveFormControl.hasError('required')">
+              Ingresa una clave
+            </mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" class="example-full-width">Ingresar</button>
+        </form>
+      </ion-col>
+      <ion-col  [size]="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
